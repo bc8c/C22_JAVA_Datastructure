@@ -1,4 +1,4 @@
-package C01_operator.S01_AssignmentOperator;
+package C01.S01_AssignmentOperator;
 
 /*대입연산자 및 축약표현*/
 

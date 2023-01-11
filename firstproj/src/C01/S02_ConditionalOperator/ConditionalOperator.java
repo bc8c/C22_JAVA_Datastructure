@@ -1,4 +1,4 @@
-package C01_operator.S02_ConditionalOperator;
+package C01.S02_ConditionalOperator;
 
 /*삼항 연산자*/
 
