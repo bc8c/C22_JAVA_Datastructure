@@ -1,5 +1,5 @@
 
-import C01.S02_Class.AttendanceBook;
+import C01.S03_Class.AttendanceBook;
 
 public class App {
     public static void main(String[] args) throws Exception {
