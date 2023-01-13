@@ -1,15 +1,19 @@
 
+import java.util.ArrayList;
+
 import C01.S03_Class.AttendanceBook;
 import C01.S04_GenericClass.DynamicAttendanceBook;
+import C02.ArrList;
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
 
-        DynamicAttendanceBook();        
-
-
+        // testAttendanceBook();
+        // testDynamicAttendanceBook();
+        testArrList();
     }
+
     static void testAttendanceBook() {
         AttendanceBook ab = new AttendanceBook(6);
         
@@ -27,7 +31,7 @@ public class App {
         System.out.println(ab.count);        
     }
 
-    static void DynamicAttendanceBook() {
+    static void testDynamicAttendanceBook() {
         DynamicAttendanceBook<String> ab1 = new DynamicAttendanceBook<String>(6);
         ab1.insertStudent("홍길동");
         ab1.insertStudent("김친구");
@@ -50,7 +54,19 @@ public class App {
         Integer i = Integer.valueOf(97);
         ab2.deleteStudnet(i);
         ab2.printStudent();
-       
-        
+    }
+
+    static void testArrList(){
+		ArrList<String> s = new ArrList<String>();
+		s.insertLast("apple");	s.print(); 	s.insertLast("orange"); s.print();
+		s.insertLast("cherry");	s.print(); 	s.insertLast("pear");   s.print();
+		s.insert("grape",1); 	s.print();	s.insert("lemon",4); 	s.print();
+		s.insertLast("kiwi"); 	s.print();		
+		s.delete(4); s.print();	s.delete(0); s.print();
+		s.delete(0); s.print();	s.delete(3); s.print();
+		s.delete(0); s.print();
+		
+		System.out.println("1번쨰 항목은 "+s.peek(1)+"이다."); System.out.println();		
+
     }
 }
