@@ -10,7 +10,7 @@ public class App {
 
     }
     static void testAttendanceBook() {
-        AttendanceBook ab = new AttendanceBook(100);
+        AttendanceBook ab = new AttendanceBook(6);
         
         ab.insertStudent("홍길동");
         ab.insertStudent("김친구");
@@ -20,6 +20,7 @@ public class App {
         ab.insertStudent("최자바");
 
         ab.printStudent();
+        // ab.deleteStudnet(4);
         ab.deleteStudnet("박감사");
         ab.printStudent();
         System.out.println(ab.count);

@@ -1,12 +1,13 @@
 package C01.S03_Class;
 
+
 public class AttendanceBook {
     private String[] students;
     public int count;
 
     public AttendanceBook(int size) { // 생성자
-        students = new String[size];
-        count = 0;
+                students = new String[size];
+                count = 0;
     }
 
     public int insertStudent(String name) { // 입력
@@ -29,13 +30,14 @@ public class AttendanceBook {
 
     public void deleteStudnet(int studentIndex) { // 삭제 (index)
         for (int i = studentIndex-1; i < count; i++) {
-            students[i] = students[i+1];
+            if(i+1 != count){
+                students[i] = students[i+1];
+            }
         }
         count--;
     }
 
     public void deleteStudnet(String name) { // 삭제 (name)
-
         for (int i = 0; i < count; i++) {
             if (students[i]==name) {
                 deleteStudnet(i+1);
