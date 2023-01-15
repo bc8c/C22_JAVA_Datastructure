@@ -5,6 +5,10 @@ import C02.S01_ArrList.ArrList;
 import C02.S02_SinglyLinkedList.SList;
 import C02.S03_ArrayStack.ArrayStack;
 import C02.S04_ArrayQueue.ArrayQueue;
+import C03.S01_BinaryTree.BinaryTree;
+import C03.S01_BinaryTree.Node;
+import C03.S02_BinarySearchTree.BinarySearchTree;
+import C03.S03_AVLTree.AVL;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -13,7 +17,10 @@ public class App {
         // testArrList();
         // testSinglylinkedList();
         // testArrayStack();
-        testArrayQueue();
+        // testArrayQueue();
+        // testBinaryTree();
+        // testBinarySearchTree();
+        testAVLTree();
     }
 
     static void testAttendanceBook() {
@@ -130,4 +137,54 @@ public class App {
 		
 		queue.remove(); 		queue.print();
     }
+
+    static void testBinaryTree(){
+        Node n1 = new Node(100); Node n2 = new Node(200);
+		Node n3 = new Node(300);	Node n4 = new Node(400);	
+		Node n5 = new Node(500);	Node n6 = new Node(600);
+		Node n7 = new Node(700);	Node n8 = new Node(800);
+
+        n1.setLeft(n2); n1.setRight(n3);
+		n2.setLeft(n4);	n2.setRight(n5);
+		n3.setLeft(n6);	n3.setRight(n7);
+		n4.setLeft(n8);
+
+        BinaryTree t = new BinaryTree();    // Binary Tree 생성
+		t.setRoot(n1);                      // Binary Tree Root 노드 지정
+
+        System.out.println(t.getRoot().getKey());
+        System.out.println(t.getRoot().getLeft().getRight().getKey());
+    }
+
+    static void testBinarySearchTree() {
+        BinarySearchTree t = new BinarySearchTree(500, "Apple");  
+
+		t.put(600, "Banana");
+		t.put(200, "Melon"); 
+		t.put(100, "Orange");
+		t.put(400, "Tangerine"); 
+		t.put(250, "Kiwi");
+		t.put(150, "Grape");
+		t.put(800, "Strawberry"); 
+		t.put(700, "Cherry"); 
+		t.put(50,  "Pear");
+		t.put(350, "Lemon");
+		t.put(10,  "Watermelon");
+
+		t.print(t.root);System.out.println();
+
+        t.delete(400);
+        t.print(t.root);System.out.println();
+    }
+
+    static void testAVLTree(){
+        AVL<Integer, String> st = new AVL<Integer, String>();
+
+	 	st.put(75, "Apple"); st.put(80, "Grape");st.put(85, "Lime");
+	 	st.put(20, "Mango"); st.put(10, "Strawberry");st.put(50, "Banana");
+	 	st.put(30, "Cherry");st.put(40, "Watermelon");st.put(70, "Melon"); st.put(90, "fruit");
+		st.print(st.root);		
+
+    }
+    
 }
