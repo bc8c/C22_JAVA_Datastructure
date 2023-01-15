@@ -3,18 +3,22 @@ import C01.S03_Class.AttendanceBook;
 import C01.S04_GenericClass.DynamicAttendanceBook;
 import C02.S01_ArrList.ArrList;
 import C02.S02_SinglyLinkedList.SList;
+import C02.S03_ArrayStack.ArrayStack;
+import C02.S04_ArrayQueue.ArrayQueue;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // testAttendanceBook();
         // testDynamicAttendanceBook();
         // testArrList();
-        testSinglylinkedList();
+        // testSinglylinkedList();
+        // testArrayStack();
+        testArrayQueue();
     }
 
     static void testAttendanceBook() {
         AttendanceBook ab = new AttendanceBook(6);
-        
+
         ab.insertStudent("홍길동");
         ab.insertStudent("김친구");
         ab.insertStudent("박감사");
@@ -90,5 +94,40 @@ public class App {
 		t.insertAfter(300,t.head.getNext()); 
 		t.print();
         System.out.println(": t의 길이 = "+t.size());
+    }
+
+    static void testArrayStack(){
+        ArrayStack<String> stack = new ArrayStack<String>();
+        //	stack.peek();
+        stack.push("apple");
+        stack.push("orange");
+        stack.push("cherry");
+        System.out.println(stack.peek());
+        stack.push("pear");
+        stack.print();
+        stack.pop();
+        System.out.println(stack.peek());
+        stack.push("grape");
+        stack.print();
+    }
+
+    static void testArrayQueue(){
+        ArrayQueue<String> queue = new ArrayQueue<String>();
+
+		queue.add("apple");		queue.add("orange");
+		queue.add("cherry");	queue.add("pear"); 		queue.print();
+		
+		queue.remove(); 		queue.print();	
+		
+		queue.add("grape");		queue.print();
+		
+		queue.remove(); 		queue.print();
+		
+		queue.add("lemon");		queue.print();
+		queue.add("mango");	    queue.print();
+		queue.add("lime");		queue.print();
+		queue.add("kiwi"); 		queue.print();
+		
+		queue.remove(); 		queue.print();
     }
 }
