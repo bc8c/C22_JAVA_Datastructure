@@ -2,14 +2,14 @@
 import C01.S03_Class.AttendanceBook;
 import C01.S04_GenericClass.DynamicAttendanceBook;
 import C02.S01_ArrList.ArrList;
+import C02.S02_SinglyLinkedList.SList;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-
         // testAttendanceBook();
         // testDynamicAttendanceBook();
-        testArrList();
+        // testArrList();
+        testSinglylinkedList();
     }
 
     static void testAttendanceBook() {
@@ -64,7 +64,31 @@ public class App {
 		s.delete(0); s.print();	s.delete(3); s.print();
 		s.delete(0); s.print();
 		
-		System.out.println("1번쨰 항목은 "+s.peek(1)+"이다."); System.out.println();		
+		System.out.println("1번쨰 항목은 "+s.peek(1)+"이다."); System.out.println();
+    }
 
+    static void testSinglylinkedList(){
+        SList<String> s = new SList<String>();
+        s.insertFront("orange"); s.insertFront("apple");
+		s.insertAfter("cherry",s.head.getNext()); 
+		s.insertFront("pear"); 			
+		s.print();
+		System.out.println(": s의 길이 = "+s.size()+"\n"); 
+		System.out.println("체리가 \t"+s.search("cherry")+"번째에 있다.");
+		System.out.println("키위가 \t"+s.search("kiwi")+"번째에 있다.\n");
+		s.deleteAfter(s.head);
+		s.print(); 
+		System.out.println(": s의 길이 = "+s.size());System.out.println();
+		s.deleteFront();
+		s.print(); 
+		System.out.println(": s의 길이 = "+s.size());System.out.println();
+		
+		SList<Integer> t = new SList<Integer>();
+		t.insertFront(500); t.insertFront(200);	
+		t.insertAfter(400,t.head); 
+		t.insertFront(100); 
+		t.insertAfter(300,t.head.getNext()); 
+		t.print();
+        System.out.println(": t의 길이 = "+t.size());
     }
 }
