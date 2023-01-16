@@ -12,7 +12,7 @@ import C03.S03_AVLTree.AVL;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // testAttendanceBook();
+        testAttendanceBook();
         // testDynamicAttendanceBook();
         // testArrList();
         // testSinglylinkedList();
@@ -20,7 +20,7 @@ public class App {
         // testArrayQueue();
         // testBinaryTree();
         // testBinarySearchTree();
-        testAVLTree();
+        // testAVLTree();
     }
 
     static void testAttendanceBook() {
