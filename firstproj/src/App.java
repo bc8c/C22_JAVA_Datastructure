@@ -9,7 +9,10 @@ import C03.S01_BinaryTree.BinaryTree;
 import C03.S01_BinaryTree.Node;
 import C03.S02_BinarySearchTree.BinarySearchTree;
 import C03.S03_AVLTree.AVL;
-import C04.S01_LinearProbing.LinearProbing;
+import C04.S01_Probing.DoubleHashing;
+import C04.S01_Probing.LinearProbing;
+import C04.S01_Probing.QuadProbing;
+import C04.S01_Probing.RandProbing;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -23,6 +26,9 @@ public class App {
         // testBinarySearchTree();
         // testAVLTree();
         testLinearProbing();
+        testQuadProving();
+        testRandProving();
+        testDoubleHashing();
     }
 
     static void testAttendanceBook() {
@@ -196,6 +202,36 @@ public class App {
         t.put(39, "orange");
         
         System.out.println(t.get(54));        
-        t.print();              
+        t.print();
     }    
+
+    static void testQuadProving() {
+        QuadProbing t = new QuadProbing();
+        t.put(71, "grape"); t.put(23, "apple");	t.put(73, "bananna");
+        t.put(49, "cherry");t.put(54, "mango");	t.put(89, "lime");
+        t.put(39, "orange");
+
+        System.out.println(t.get(54));        
+        t.print();        
+    }
+
+    static void testRandProving() {
+        RandProbing t = new RandProbing();
+        t.put(71, "grape"); t.put(23, "apple");	t.put(73, "bananna");
+        t.put(49, "cherry");t.put(54, "mango");	t.put(89, "lime");
+        t.put(39, "orange");
+
+        System.out.println(t.get(54));        
+        t.print();        
+    }
+
+    static void testDoubleHashing() {
+        DoubleHashing t = new DoubleHashing();
+        t.put(71, "grape"); t.put(23, "apple");	t.put(73, "bananna");
+        t.put(49, "cherry");t.put(54, "mango");	t.put(89, "lime");
+        t.put(39, "orange");
+
+        System.out.println(t.get(54));        
+        t.print();        
+    }
 }

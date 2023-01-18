@@ -1,4 +1,4 @@
-package C04.S01_LinearProbing;
+package C04.S01_Probing;
 
 public class LinearProbing<K, V> {
 	private int M = 11;  // 테이블 크기
