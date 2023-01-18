@@ -9,10 +9,11 @@ import C03.S01_BinaryTree.BinaryTree;
 import C03.S01_BinaryTree.Node;
 import C03.S02_BinarySearchTree.BinarySearchTree;
 import C03.S03_AVLTree.AVL;
+import C04.S01_LinearProbing.LinearProbing;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        testAttendanceBook();
+        // testAttendanceBook();
         // testDynamicAttendanceBook();
         // testArrList();
         // testSinglylinkedList();
@@ -21,6 +22,7 @@ public class App {
         // testBinaryTree();
         // testBinarySearchTree();
         // testAVLTree();
+        testLinearProbing();
     }
 
     static void testAttendanceBook() {
@@ -186,5 +188,14 @@ public class App {
 		st.print(st.root);		
 
     }
-    
+
+    static void testLinearProbing(){
+        LinearProbing t = new LinearProbing();
+        t.put(71, "grape"); t.put(23, "apple");	t.put(73, "bananna");
+        t.put(49, "cherry");t.put(54, "mango");	t.put(89, "lime");
+        t.put(39, "orange");
+        
+        System.out.println(t.get(54));        
+        t.print();              
+    }    
 }
