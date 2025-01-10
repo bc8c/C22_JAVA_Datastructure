@@ -27,6 +27,7 @@ public class Array {
         // #3. 문자열(String) 선언생성의 두가지 방법
         String str = new String("안녕");
         // String str = "안녕";
+        System.out.println(str);
 
         // #4. 문자열(String) 클래스의 메소드 사용예시
         String str1 = new String("JAVA Class!");
