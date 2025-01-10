@@ -1,4 +1,4 @@
-package C01.S04_GenericClass;
+package C01.S05_GenericClass;
 
 public class DynamicAttendanceBook<T> {
     private T[] students;

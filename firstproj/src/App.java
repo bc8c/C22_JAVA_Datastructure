@@ -1,6 +1,6 @@
 
-import C01.S03_Class.AttendanceBook;
-import C01.S04_GenericClass.DynamicAttendanceBook;
+import C01.S04_Class.AttendanceBook;
+import C01.S05_GenericClass.DynamicAttendanceBook;
 import C02.S01_ArrList.ArrList;
 import C02.S02_SinglyLinkedList.SList;
 import C02.S03_ArrayStack.ArrayStack;
