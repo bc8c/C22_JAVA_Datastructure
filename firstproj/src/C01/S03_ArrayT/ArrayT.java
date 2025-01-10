@@ -1,6 +1,6 @@
-package C01.S03_Array;
+package C01.S03_ArrayT;
 
-public class Array {
+public class ArrayT {
     public static void main(String[] args) {
 
         // # 1.1 배열 생성 방식 ( 생성과 할당 분리 )
