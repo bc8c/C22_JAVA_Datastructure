@@ -27,7 +27,7 @@ public class DynamicAttendanceBook<T> {
         }        
     }
 
-    public void deleteStudnet(int studentIndex) { // 삭제 (index)
+    public void deleteStudent(int studentIndex) { // 삭제 (index)
         for (int i = studentIndex-1; i < count; i++) {
             if(i+1 != count){
                 students[i] = students[i+1];
@@ -36,10 +36,10 @@ public class DynamicAttendanceBook<T> {
         count--;
     }
 
-    public void deleteStudnet(T name) { // 삭제 (name)
+    public void deleteStudent(T name) { // 삭제 (name)
         for (int i = 0; i < count; i++) {
             if (students[i]==name) {
-                deleteStudnet(i+1);
+                deleteStudent(i+1);
                 System.out.printf("Succesfuly delete the student ( name == %s )\n", name);
                 return;
             }           

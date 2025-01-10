@@ -59,7 +59,7 @@ public class App {
 
         ab1.printStudent();
         System.out.println("---------------------------------------------");
-        ab1.deleteStudnet("박감사");
+        ab1.deleteStudent("박감사");
         ab1.printStudent();
 
         DynamicAttendanceBook<Integer> ab2 = new DynamicAttendanceBook<Integer>(6);
@@ -69,7 +69,7 @@ public class App {
         ab2.printStudent();
         System.out.println("---------------------------------------------");
         Integer i = Integer.valueOf(97);
-        ab2.deleteStudnet(i);
+        ab2.deleteStudent(i);
         ab2.printStudent();
     }
 
