@@ -6,8 +6,8 @@ public class AttendanceBook {
     public int count;
 
     public AttendanceBook(int size) { // 생성자
-                students = new String[size];
-                count = 0;
+        students = new String[size];
+        count = 0;
     }
 
     public int insertStudent(String name) { // 입력
