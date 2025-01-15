@@ -18,7 +18,7 @@ public class ArrList <E> {
          a[size++] = newItem;    	// 새 항목 삽입
     }
         
-    public void insert(E newItem, int k) { // 새 항목을 k-1번쨰 항목 다음에 삽입
+    public void insert(E newItem, int k) { // 새 항목을 k번 위치치에 삽입
     	if (size == a.length)   		   // 배열에 빈 공간이 없으면
     		resize(2*a.length);			   // 배열 크기 2배로 확장
     	for (int i = size-1; i >= k; i--)  a[i+1] = a[i];  // 한 칸씩 뒤로 이동
@@ -26,7 +26,7 @@ public class ArrList <E> {
     	size++;
     }
 
-    public E delete(int k) {  // k번째 항목 삭제
+    public E delete(int k) {  // k번 항목 삭제
 		if (isEmpty()) throw new NoSuchElementException(); // underflow 경우에 프로그램 정지
 		E item = a[k];
 		for (int i = k; i <size; i++)  a[i] = a[i+1];  // 한 칸씩 앞으로 이동
@@ -36,7 +36,7 @@ public class ArrList <E> {
 		return item;
     }
     
-    public E peek(int k) {  // k번째 항목을 리턴, 단순히 읽기만 한다.
+    public E peek(int k) {  // k번 항목을 리턴, 단순히 읽기만 한다.
   		if (isEmpty()) throw new NoSuchElementException(); // underflow 경우에 프로그램 정지
   		return a[k];
     }    
