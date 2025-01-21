@@ -18,7 +18,7 @@ public class App {
         ab.deleteStudnet(4);
         ab.deleteStudnet("박감사");
         ab.printStudent();
-        System.out.println(ab.count); 
+        System.out.println(ab.count);
     }
-    
+
 }

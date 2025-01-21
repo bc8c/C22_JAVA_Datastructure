@@ -12,9 +12,11 @@ public class ArrayT {
         // 1.2. 배열 생성 방식 ( 생성과 할당 일체 )
         // int[] a = new int[]{3,4,5};
         // int[] a = {3,4,5};
+        int[] kk1 = { 3, 4, 5 };
+        int[] kk2 = { 3, 4, 5 };
 
         // #2.1 배열 선언 및 할당, 사용 (Index 활용)
-        int[] b = new int[]{3,4,5};
+        int[] b = new int[] { 3, 4, 5 };
         System.out.println(b[0]);
         System.out.println(b[1]);
         System.out.println(b[2]);
